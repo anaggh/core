@@ -52,7 +52,7 @@ from a one-column mobile layout and gradually improve it according to available 
 body{
     font-family: 'Open Sans', "Trebuchet MS", Helvetica, Verdana, sans-serif;
 	color: rgb(82, 100, 117);
-	font-size:0.96em;
+	font-size:0.98em;
 }
 
 p, ul{
@@ -80,7 +80,7 @@ a:hover{
 	font-size: 2em;
 	text-align:center;
 	background: #F5F5F5;
-	padding: 13px 0;
+	padding: 9px 0;
 }
 
 .slogan{
