@@ -107,6 +107,7 @@ hr.endPostHr {
 code, pre{
 	font-family: Terminal, monospace;
 	background-color:rgb(240, 240, 240);
+	overflow-x: auto;
 }
 
 code {
