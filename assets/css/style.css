@@ -1,0 +1,235 @@
+/* Reset */
+body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Dead Simple Grid (c) 2015 Vladimir Agafonkin */
+
+.row .row { margin:  0 -1.5em; }
+.col      { padding: 0  1.5em; }
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media only screen { .col {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}}
+
+/* Important Responsiveness */
+.container { 
+	max-width: 90em;
+	margin:0 auto;
+}
+
+/* you only need width to set up columns; all columns are 100%-width by default, so we start
+from a one-column mobile layout and gradually improve it according to available screen space */
+
+@media only screen and (min-width: 34em) {
+	.feature, .info { width: 50%; }
+}
+
+@media only screen and (min-width: 54em) {
+	.content { width: 66.66%; }
+	.sidebar { width: 33.33%; }
+	.info    { width: 100%;   }
+}
+
+@media only screen and (min-width: 76em) {
+	.content { width: 66.67%; } /* 8/12 */
+	.sidebar { width: 33.33%; } /* 4/12 */
+	.info    { width: 50%;	}
+}
+
+/* Custom Styles */
+
+body{
+    font-family: 'Open Sans', "Trebuchet MS", Helvetica, Verdana, sans-serif;
+	color: rgb(82, 100, 117);
+	font-size:0.96em;
+}
+
+p, ul{
+	line-height:1.5;
+}
+
+/* Fix Image Overflowing if size is too big */
+img{
+	max-width: 100%;
+}
+
+/* Links */
+a{
+	text-decoration:none;
+	color:#198cff;
+}
+
+a:hover{
+	color: #000;
+}
+
+/* Header */
+
+.nav{
+	font-size: 2em;
+	text-align:center;
+	background: #F5F5F5;
+	padding: 13px 0;
+}
+
+.slogan{
+	font-size:medium;
+}
+
+/* Footer */
+.footer{
+	text-align:center;
+	background-color: #F5F5F5;
+	font-size: 13px;
+	padding: 8px 0;
+}
+
+/* hr style after each post */
+hr.endPostHr { 
+	border: 0; 
+	height: 1px; 
+	background: #333; 
+	background-image: linear-gradient(to right, #ccc, #333, #ccc); 
+	}
+
+/* Syntax Highlighting */
+code, pre{
+	font-family: Terminal, monospace;
+	background-color:rgb(240, 240, 240);
+}
+
+code {
+	border: 0;
+	margin: 0; 
+	color: #333;
+}
+
+pre code {
+	font-weight: normal !important;
+	overflow-x: auto;
+}	
+	
+/* Meta information - home.php */
+
+.timestamp, .meta{
+	font-size:small;
+	padding-bottom: 8px;
+}
+
+/* Pagination */
+
+.button {
+    background-color: #fff; /* Green */
+    border: 1px solid rgb(82, 100, 117);
+    color: rgb(82, 100, 117);
+    padding: 5px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 4px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.pagination {
+	list-style-type:none;
+	padding:20px 0;
+	margin: 0;
+	text-align:center;
+}
+
+.pagination li{
+	display:inline-block;
+}
+
+.previous, next{
+	/* Not needed for now*/
+}
+
+/* posts.php page.php */
+
+.stats{
+	list-style-type:none;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+.stats li{
+	display:inline-block;
+	padding-right: 10px;
+	font-size: small;
+}
+
+/* Blockquotes */
+blockquote {
+	border-left: 4px solid #6a7e95;
+	padding: 5px 5px 5px 20px; 
+}
+
+/* Tables */
+table {
+	display: table;
+	width: 100%;
+	border-width: 0px;
+	border-collapse: collapse;
+	color: #526475;
+	margin-top: 0px;
+	margin-bottom: 20px; 
+}
+  
+table thead tr td {
+    font-weight: normal;
+    border-bottom: 2px solid #d1e1e8;
+    background-color: #f6f8fa; 
+}
+	
+table tr td {
+    border-bottom: 1px solid #d1e1e8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; 
+}
+
+/* Plugins */
+
+.plugin-tags li{
+	text-transform: capitalize;
+	list-style-type: none;
+	font-size: 14px;
+}
+
+.plugin > h2 {
+	font-weight: normal !important;
+	text-transform: capitalize;
+}
+
+.plugin ul {
+	list-style: none !important;
+	padding: 0 !important;
+}
+
+.plugin li {
+	padding: 0 !important;
+}
+
+.plugin-pages ul.children {
+	margin: 0 0 0 10px;
+}
