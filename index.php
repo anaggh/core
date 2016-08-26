@@ -33,8 +33,19 @@
 			?>
 		</div>
 
-		<!-- Sidebar -->
+		<!-- Sidebar -->		
 		<div class="col sidebar">
+		
+		<!-- Custom Search -->
+		<form role="search" action="https://encrypted.google.com/search">
+        <div class="form-group">
+          <input type="hidden" name="as_sitesearch" value="<?php echo $Site->url() ?>">
+          <input type="hidden" name="as_qdr" value="all">
+          <input type="text" name="as_q" class="form-control" placeholder="Search...">
+        </div>
+		</form>
+			
+		<!-- Load sidebar -->
 		<?php Theme::plugins('siteSidebar') ?>		
 		</div>
 	</div>
