@@ -23,7 +23,7 @@ body{
 }}
 
 /* Important Responsiveness */
-.container { 
+.container {
 	max-width: 90em;
 	margin:0 auto;
 }
@@ -50,7 +50,7 @@ from a one-column mobile layout and gradually improve it according to available 
 /* Custom Styles */
 
 body, input{
-    font-family: 'Open Sans', "Trebuchet MS", Helvetica, Verdana, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Helvetica, Verdana, sans-serif;
 	color: rgb(82, 100, 117);
 	font-size:0.98em;
 }
@@ -96,11 +96,11 @@ a:hover{
 }
 
 /* hr style after each post */
-hr.endPostHr { 
-	border: 0; 
-	height: 1px; 
-	background: #333; 
-	background-image: linear-gradient(to right, #ccc, #333, #ccc); 
+hr.endPostHr {
+	border: 0;
+	height: 1px;
+	background: #333;
+	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 	}
 
 /* Syntax Highlighting */
@@ -112,15 +112,15 @@ code, pre{
 
 code {
 	border: 0;
-	margin: 0; 
+	margin: 0;
 	color: #333;
 }
 
 pre code {
 	font-weight: normal !important;
 	overflow-x: auto;
-}	
-	
+}
+
 /* Meta information - home.php */
 
 .timestamp, .meta{
@@ -168,20 +168,22 @@ pre code {
 
 .stats{
 	list-style-type:none;
-	text-transform:uppercase;
+	font-weight:bold;
 	text-align:center;
+	font-size: small;
 }
 
 .stats li{
 	display:inline-block;
-	padding-right: 10px;
-	font-size: small;
+	padding-right: 8px;
+	text-transform: capitalize;
+	font-weight: normal;
 }
 
 /* Blockquotes */
 blockquote {
 	border-left: 4px solid #6a7e95;
-	padding: 5px 5px 5px 20px; 
+	padding: 5px 5px 5px 20px;
 }
 
 /* Tables */
@@ -192,33 +194,36 @@ table {
 	border-collapse: collapse;
 	color: #526475;
 	margin-top: 0px;
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
 }
-  
+
 table thead tr td {
     font-weight: normal;
     border-bottom: 2px solid #d1e1e8;
-    background-color: #f6f8fa; 
+    background-color: #f6f8fa;
 }
-	
+
 table tr td {
     border-bottom: 1px solid #d1e1e8;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10px; 
+    padding-left: 10px;
 }
 
 /* Plugins */
 
+.plugin-tags{
+	font-size: 0.98em; /* Equal to body font-size */
+}
+
 .plugin-tags li{
 	text-transform: capitalize;
 	list-style-type: none;
-	font-size: 14px;
 }
 
 .plugin > h2 {
-	font-weight: normal !important;
-	text-transform: capitalize;
+	text-transform: uppercase;
+	font-weight: normal;
 }
 
 .plugin ul {
@@ -237,14 +242,14 @@ table tr td {
 /* Search Box */
 .form-control{
 	width: 100%;
-    padding: 12px 20px;
-    margin: 15px 0 5px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    transition: 0.5s;
-    outline: none;
+	padding: 12px 20px;
+	margin: 15px 0 5px 0;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	transition: 0.5s;
+	outline: none;
 }
 
 .form-control:focus {
-    border: 2px solid #555;
+	border: 2px solid #555;
 }

@@ -39,10 +39,10 @@
 	<!-- Post's footer -->
 	<footer>
 		<!-- Post's tags -->
-		<ul class="stats">
+		<ul class="stats"> TAGS:
 		<?php
 			$tags = $Post->tags(true);
-
+			if(count($tags) == 0){ echo "No tags found.";}
 			foreach($tags as $tagKey=>$tagName) {
 				echo '<li><a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a></li>';
 			}
