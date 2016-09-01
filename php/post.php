@@ -39,15 +39,20 @@
 	<!-- Post's footer -->
 	<footer>
 		<!-- Post's tags -->
-		<ul class="stats"> TAGS:
+		<div class="tags">TAGS:<span class="listOfTags">
 		<?php
 			$tags = $Post->tags(true);
-			if(count($tags) == 0){ echo "No tags found.";}
-			foreach($tags as $tagKey=>$tagName) {
-				echo '<li><a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a></li>';
+			if(count($tags) == 0){
+				echo "No tags found.";
+			}
+
+			else{
+				foreach($tags as $tagKey=>$tagName) {
+					echo '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a>';
+				}
 			}
 		?>
-		</ul>
+		</div>
 	</footer>
 
 	<!-- Show plugins, Hook: Post End -->

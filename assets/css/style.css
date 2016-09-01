@@ -166,15 +166,13 @@ pre code {
 
 /* posts.php page.php */
 
-.stats{
-	list-style-type:none;
+.tags{
+	font-size: small;
 	font-weight:bold;
 	text-align:center;
-	font-size: small;
 }
 
-.stats li{
-	display:inline-block;
+.listOfTags{
 	padding-right: 8px;
 	text-transform: capitalize;
 	font-weight: normal;
