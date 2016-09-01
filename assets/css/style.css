@@ -173,9 +173,12 @@ pre code {
 }
 
 .listOfTags{
-	padding-right: 8px;
 	text-transform: capitalize;
 	font-weight: normal;
+}
+
+.listOfTags a{
+	padding-right: 8px;
 }
 
 /* Blockquotes */
