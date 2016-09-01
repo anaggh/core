@@ -52,6 +52,7 @@
 				}
 			}
 		?>
+		</span>
 		</div>
 	</footer>
 

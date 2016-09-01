@@ -63,6 +63,7 @@
 				}
 			}
 		?>
+		</span>
 		</div>
 
 		<!-- A horizontal rule after each post -->
