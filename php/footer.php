@@ -1,5 +1,5 @@
 <div class="footer">
-	<?php echo $Site->footer() ?> | Powered by <a href="https://www.bludit.com/" target="_blank">BLUDIT</a> | Theme: <a href="https://github.com/anaggh/core" target="_blank">Core</a> |
+	<?php echo $Site->footer() ?>
 		
 	<!-- Social Media Links, Sitemap and RSS -->
 	<?php
@@ -29,5 +29,5 @@
 		?>	
 		
 	<!-- Go Top! Link -->
-	<a href="#">Go Top!</a> |		
+	| <a href="#">Go Top!</a> |		
 </div>
