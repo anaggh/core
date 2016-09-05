@@ -29,5 +29,5 @@
 		?>	
 		
 	<!-- Go Top! Link -->
-	| <a href="#">Go Top!</a> |		
+	<a href="#">Go Top!</a> |		
 </div>
