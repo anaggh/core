@@ -132,7 +132,7 @@ pre code {
 
 .button {
     background-color: #fff;
-    border: 1px solid rgb(82, 100, 117);
+    border: 2px solid #555;
     color: rgb(82, 100, 117);
     padding: 5px 23px;
     text-align: center;
@@ -145,7 +145,7 @@ pre code {
 }
 
 .button:hover {
-    background-color: #555555;
+    background-color: #555;
     color: white;
 }
 
@@ -160,8 +160,8 @@ pre code {
 	display:inline-block;
 }
 
-.previous, next{
-	/* Not needed for now*/
+.previous, .next{
+	text-transform:uppercase;
 }
 
 /* posts.php page.php */
