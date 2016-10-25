@@ -51,7 +51,7 @@ from a one-column mobile layout and gradually improve it according to available 
 
 body, input{
 	font-family: 'Open Sans', "Trebuchet MS", Helvetica, Verdana, sans-serif;
-	color: rgb(82, 100, 117);
+	color: rgba(0, 0, 0, 0.8);
 	font-size:0.98em;
 }
 
@@ -132,8 +132,8 @@ pre code {
 
 .button {
     background-color: #fff;
-    border: 2px solid #555;
-    color: rgb(82, 100, 117);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     padding: 5px 23px;
     text-align: center;
     text-decoration: none;
@@ -145,7 +145,7 @@ pre code {
 }
 
 .button:hover {
-    background-color: #555;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
 
@@ -193,7 +193,7 @@ table {
 	width: 100%;
 	border-width: 0px;
 	border-collapse: collapse;
-	color: #526475;
+	color: rgba(0, 0, 0, 0.8);
 	margin-top: 0px;
 	margin-bottom: 20px;
 }
@@ -246,7 +246,7 @@ table tr td {
 	padding: 12px 20px;
 	margin: 15px 0 5px 0;
 	box-sizing: border-box;
-	border: 2px solid #ccc;
+	border: 2px solid rgba(0, 0, 0, 0.8);
 	transition: 0.5s;
 	outline: none;
 }
