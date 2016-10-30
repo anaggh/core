@@ -246,11 +246,11 @@ table tr td {
 	padding: 12px 20px;
 	margin: 15px 0 5px 0;
 	box-sizing: border-box;
-	border: 2px solid rgba(0, 0, 0, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.5);
 	transition: 0.5s;
 	outline: none;
 }
 
 .form-control:focus {
-	border: 2px solid #555;
+	border: 1px solid #000;
 }
