@@ -58,9 +58,11 @@
 			}
 
 			else{
+				$listOfTags = '';
 				foreach($tags as $tagKey=>$tagName) {
-					echo '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a>';
+					$listOfTags .= '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a>, ';
 				}
+				echo substr($listOfTags, 0, -2) . '.'; // Remove final ", '" and add "." after the last tag.
 			}
 		?>
 		</span>
