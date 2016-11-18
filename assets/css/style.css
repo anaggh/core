@@ -28,7 +28,7 @@ body{
 	margin:0 auto;
 }
 
-/* you only need width to set up columns; all columns are 100%-width by default, so we start
+/* You only need width to set up columns; all columns are 100%-width by default, so we start
 from a one-column mobile layout and gradually improve it according to available screen space */
 
 @media only screen and (min-width: 34em) {
@@ -96,12 +96,12 @@ a:hover{
 }
 
 /* hr style after each post */
-hr.endPostHr {
+hr.end-post-hr{
 	border: 0;
 	height: 1px;
 	background: #333;
 	background-image: linear-gradient(to right, #ccc, #333, #ccc);
-	}
+}
 
 /* Syntax Highlighting */
 code, pre{
@@ -172,7 +172,7 @@ pre code {
 	text-align:center;
 }
 
-.listOfTags{
+.tag-list{
 	font-weight: normal;
 }
 
@@ -248,4 +248,14 @@ table tr td {
 
 .form-control:focus {
 	border: 1px solid #000;
+}
+
+/* Cover Images */
+.featured{
+	/* Add custom CSS here if required. */
+}
+
+/* Read-more button */
+.read-more{
+	text-transform:uppercase;
 }

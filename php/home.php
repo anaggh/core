@@ -13,18 +13,19 @@
 			<p><?php echo $Post->description() ?></p>
 		</div>
 		<div class="meta">
-	                <?php
-	                	// Get the user who created the post.
-	                	$User = $Post->user();
+	        <?php
+	            // Get the user who created the post.
+	            $User = $Post->user();
 
-	                	// Default author is the username.
-	                	$author = $User->username();
+	            // Default author is the username.
+	            $author = $User->username();
 
-	                	// If the user complete the first name or last name this will be the author.
+	            // If the user has entered the first name or last name, it would be set as author.
 				if( Text::isNotEmpty($User->firstName()) || Text::isNotEmpty($User->lastName()) ) {
 					$author = $User->firstName().' '.$User->lastName();
 				}
 			?>
+
 			<span class="timestamp">Posted <time class="published" datetime="2016-12-01"><?php echo $Post->date() ?></time> by <?php echo $author ?></span>
 		</div>
 	</header>
@@ -41,35 +42,34 @@
 
 	<!-- Post's footer -->
 	<footer>
-
 		<!-- Read more button -->
-	        <?php if($Post->readMore()) { ?>
-		<ul class="actions">
-			<li><a href="<?php echo $Post->permalink() ?>" class="button"><?php $Language->p('Read more') ?></a></li>
-		</ul>
-		<?php } ?>
+	    <?php if($Post->readMore()) { 
+			echo "<a href=" . $Post->permalink() . " class='button read-more' title='read-more'>" .$Language->get('Read more'). "...</a>";
+		} 
+		?>
 
 		<!-- Post's tags -->
-		<div class="tags">TAGS:<span class="listOfTags">
-		<?php
-			$tags = $Post->tags(true);
-			if(count($tags) == 0){
-				echo "No tags found.";
-			}
+		<div class="tags">TAGS:
+			<span class="tag-list">
+				<?php
+					$tags = $Post->tags(true);
+					if(count($tags) == 0){
+						echo "No tags found.";
+					}
 
-			else{
-				$listOfTags = '';
-				foreach($tags as $tagKey=>$tagName) {
-					$listOfTags .= '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a>, ';
-				}
-				echo substr($listOfTags, 0, -2) . '.'; // Remove final ", '" and add "." after the last tag.
-			}
-		?>
-		</span>
+					else{
+						$listOfTags = '';
+						foreach($tags as $tagKey=>$tagName) {
+							$listOfTags .= '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a>, ';
+						}
+						echo substr($listOfTags, 0, -2) . '.'; // Remove final ", '" and add "." after the last tag.
+					}
+				?>
+			</span>
 		</div>
 
 		<!-- A horizontal rule after each post -->
-		<hr class="endPostHr">
+		<hr class="end-post-hr">
 	</footer>
 
 	<!-- Plugins Post End -->
