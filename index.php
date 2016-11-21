@@ -39,8 +39,7 @@
 		<!-- Search -->
 		<form role="search" action="<?php echo $Site->url() . 'search.php';?>" target="_blank">
 		<div class="form-group">
-			<input type="hidden" name="filter" value="all">
-			<input type="text" name="searchQuery" class="form-control" placeholder="Search...">
+			<input type="text" name="q" class="form-control" placeholder="Search...">
 		</div>
 		</form>
 		 
