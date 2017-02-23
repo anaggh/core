@@ -9,11 +9,11 @@
 ?>
 
 <link rel="stylesheet" href="<?php echo HTML_PATH_THEME ?>assets/css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<!-- Syntax Highlighting - Highlight.js v9.9 (Automatic detection) -->
+<!-- Syntax Highlighting - Highlight.js v9.9 (Automatic detection)
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script> 
+<script>hljs.initHighlightingOnLoad();</script>
+-->
 <!-- Disable referrer -->
 <meta name="referrer" content="no-referrer" />
 

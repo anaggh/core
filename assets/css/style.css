@@ -50,9 +50,9 @@ from a one-column mobile layout and gradually improve it according to available 
 /* Custom Styles */
 
 body, input{
-	font-family: 'Open Sans', "Trebuchet MS", Helvetica, Verdana, sans-serif;
+	font-family: "Lucida Console", Monaco, "Courier New", Courier, monospace, sans-serif;
 	color: rgba(0, 0, 0, 0.8);
-	font-size:0.98em;
+	font-size: 0.98em;
 }
 
 p, ul{
@@ -170,6 +170,7 @@ pre code {
 	font-size: small;
 	font-weight:bold;
 	text-align:center;
+	padding-bottom: 25px;
 }
 
 .tag-list{

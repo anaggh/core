@@ -2,9 +2,9 @@
 
 #### Features:
 
-* Automatic Code Syntax Highlighting - highlight.js - https://highlightjs.org/
-* Default font: Open Sans
-
+* Lightweight
+* Uses default system fonts.
+* Optional: Automatic Code Syntax Highlighting - highlight.js - https://highlightjs.org/
 
 #### Additional Notes:
 
