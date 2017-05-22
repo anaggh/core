@@ -18,34 +18,31 @@
 	<div class="row">
 		<div class="col content">
 			<?php
-			    if( ($Url->whereAmI()=='home') || ($Url->whereAmI()=='tag') || ($Url->whereAmI()=='blog') )
-			    {
-			        include(THEME_DIR_PHP.'home.php');
-			    }
-			    elseif($Url->whereAmI()=='post')
-			    {
-			        include(THEME_DIR_PHP.'post.php');
-			    }
-			    elseif($Url->whereAmI()=='page')
-			    {
-			        include(THEME_DIR_PHP.'page.php');
-			    }
+			if($Url->whereAmI()=='post') {
+						include(THEME_DIR_PHP.'post.php');
+					}
+			elseif($Url->whereAmI()=='page') {
+				include(THEME_DIR_PHP.'page.php');
+			}
+			else {
+				include(THEME_DIR_PHP.'home.php');
+			}
 			?>
 		</div>
 
 		<!-- Sidebar -->
 		<div class="col sidebar">
-				
+
 		<!-- Search -->
 		<form role="search" action="<?php echo $Site->url() . 'search.php';?>" target="_blank">
 		<div class="form-group">
 			<input type="text" name="q" class="form-control" placeholder="Search...">
 		</div>
 		</form>
-		 
-			
+
+
 		<!-- Load sidebar -->
-		<?php Theme::plugins('siteSidebar') ?>		
+		<?php Theme::plugins('siteSidebar') ?>
 		</div>
 	</div>
 </div>
@@ -56,7 +53,7 @@
 </footer>
 
 <!-- Add Scripts here (if required) -->
-	
+
 <!-- Plugins Site Body End -->
 <?php Theme::plugins('siteBodyEnd') ?>
 

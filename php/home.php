@@ -43,9 +43,9 @@
 	<!-- Post's footer -->
 	<footer>
 		<!-- Read more button -->
-	    <?php if($Post->readMore()) { 
+	    <?php if($Post->readMore()) {
 			echo "<a href=" . $Post->permalink() . " class='button read-more' title='read-more'>" .$Language->get('Read more'). "...</a>";
-		} 
+		}
 		?>
 
 		<!-- Post's tags -->
@@ -83,11 +83,13 @@
 <ul class="actions pagination">
 <?php
 	if( Paginator::get('showNewer') ) {
-		echo '<li><a href="'.Paginator::urlPrevPage().'" class="button previous">'.$Language->get('« Newer posts').'</a></li>';
+		echo '<li><a href="'.Paginator::urlFirstPage().'" class="button" title="first-page">'.$Language->get('&#8676;').'</a></li>';
+		echo '<li><a href="'.Paginator::urlPrevPage().'" class="button previous" title="previous-page">'.$Language->get('« Newer posts').'</a></li>';
 	}
 
 	if( Paginator::get('showOlder') ) {
-		echo '<li><a href="'.Paginator::urlNextPage().'" class="button next">'.$Language->get('Older posts »').'</a></li>';
+		echo '<li><a href="'.Paginator::urlNextPage().'" class="button next" title="next-page">'.$Language->get('Older posts »').'</a></li>';
+		echo '<li><a href="'.Paginator::urlLastPage().'" class="button" title="last-page">'.$Language->get('&#8677;').'</a></li>';
 	}
 ?>
 </ul>
