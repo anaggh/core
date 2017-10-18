@@ -1,21 +1,21 @@
-<!-- Show each post on this page -->
-<?php foreach ($posts as $Post): ?>
+<!-- Show each page -->
+<?php foreach ($pages as $page): ?>
 
 <article class="post">
 
-	<!-- Show plugins, Hook: Post Begin -->
-	<?php Theme::plugins('postBegin') ?>
+	<!-- Show plugins, Hook: Page Begin -->
+	<?php Theme::plugins('pageBegin') ?>
 
-	<!-- Post's header -->
+	<!-- Header -->
 	<header>
 		<div class="title">
-			<h1><a href="<?php echo $Post->permalink() ?>"><?php echo $Post->title() ?></a></h1>
-			<p><?php echo $Post->description() ?></p>
+			<h1><a href="<?php echo $page->permalink() ?>"><?php echo $page->title() ?></a></h1>
+			<p><?php echo $page->description() ?></p>
 		</div>
 		<div class="meta">
 	        <?php
-	            // Get the user who created the post.
-	            $User = $Post->user();
+	            // Get the user who created the page.
+	            $User = $page->user();
 
 	            // Default author is the username.
 	            $author = $User->username();
@@ -26,33 +26,33 @@
 				}
 			?>
 
-			<span class="timestamp">Posted <time class="published" datetime="2016-12-01"><?php echo $Post->date() ?></time> by <?php echo $author ?></span>
+			<span class="timestamp">Posted <time class="published" datetime="2016-12-01"><?php echo $page->date() ?></time> by <?php echo $author ?></span>
 		</div>
 	</header>
 
 	<!-- Cover Image -->
 	<?php
-		if($Post->coverImage()) {
-			echo '<a href="'.$Post->permalink().'" class="image featured"><img src="'.$Post->coverImage().'" alt="Cover Image"></a>';
+		if($page->coverImage()) {
+			echo '<a href="'.$page->permalink().'" class="image featured"><img src="'.$page->coverImage().'" alt="Cover Image"></a>';
 		}
 	?>
 
-	<!-- Post's content, the first part if has pagebrake -->
-	<?php echo $Post->content(false) ?>
+	<!-- Page's content, the first part if has pagebrake -->
+	<?php echo $page->content(false) ?>
 
-	<!-- Post's footer -->
+	<!-- Page's footer -->
 	<footer>
 		<!-- Read more button -->
-	    <?php if($Post->readMore()) {
-			echo "<a href=" . $Post->permalink() . " class='button read-more' title='read-more'>" .$Language->get('Read more'). "...</a>";
+	    <?php if($page->readMore()) {
+			echo "<a href=" . $page->permalink() . " class='button read-more' title='read-more'>" .$Language->get('Read more'). "...</a>";
 		}
 		?>
 
-		<!-- Post's tags -->
+		<!-- Page's tags -->
 		<div class="tags">TAGS:
 			<span class="tag-list">
 				<?php
-					$tags = $Post->tags(true);
+					$tags = $page->tags(true);
 					if(count($tags) == 0){
 						echo "No tags found.";
 					}
@@ -68,12 +68,12 @@
 			</span>
 		</div>
 
-		<!-- A horizontal rule after each post -->
+		<!-- A horizontal rule after each page -->
 		<hr class="end-post-hr">
 	</footer>
 
-	<!-- Plugins Post End -->
-	<?php Theme::plugins('postEnd') ?>
+	<!-- Plugins Page End -->
+	<?php Theme::plugins('pageEnd') ?>
 
 </article>
 
@@ -82,14 +82,14 @@
 <!-- Pagination -->
 <ul class="actions pagination">
 <?php
-	if( Paginator::get('showNewer') ) {
-		echo '<li><a href="'.Paginator::urlFirstPage().'" class="button" title="first-page">'.$Language->get('&#8676;').'</a></li>';
-		echo '<li><a href="'.Paginator::urlPrevPage().'" class="button previous" title="previous-page">'.$Language->get('« Newer posts').'</a></li>';
+	if( Paginator::get('showPrev') ) {
+		echo '<li><a href="'.Paginator::firstPageUrl().'" class="button" title="first-page">'.$Language->get('&#8676;').'</a></li>';
+		echo '<li><a href="'.Paginator::prevPageUrl().'" class="button previous" title="previous-page">'.$Language->get('« Newer posts').'</a></li>';
 	}
 
-	if( Paginator::get('showOlder') ) {
-		echo '<li><a href="'.Paginator::urlNextPage().'" class="button next" title="next-page">'.$Language->get('Older posts »').'</a></li>';
-		echo '<li><a href="'.Paginator::urlLastPage().'" class="button" title="last-page">'.$Language->get('&#8677;').'</a></li>';
+	if( Paginator::get('showNext') ) {
+		echo '<li><a href="'.Paginator::nextPageUrl().'" class="button next" title="next-page">'.$Language->get('Older posts »').'</a></li>';
+		echo '<li><a href="'.Paginator::lastPageUrl().'" class="button" title="last-page">'.$Language->get('&#8677;').'</a></li>';
 	}
 ?>
 </ul>

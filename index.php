@@ -18,10 +18,7 @@
 	<div class="row">
 		<div class="col content">
 			<?php
-			if($Url->whereAmI()=='post') {
-						include(THEME_DIR_PHP.'post.php');
-					}
-			elseif($Url->whereAmI()=='page') {
+			if($Url->whereAmI()=='page') {
 				include(THEME_DIR_PHP.'page.php');
 			}
 			else {
