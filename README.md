@@ -1,5 +1,7 @@
 ### Bludit Theme: Core
 
+#### Note: If you are using Bludit v1, use the v1 branch instead.
+
 #### Features:
 
 * Lightweight

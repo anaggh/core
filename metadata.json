@@ -1,9 +1,9 @@
 {
 	"author": "Anaggh S",
 	"email": "",
-	"website": "https://github.com/anaggh/core-v2",
-	"version": "2.0",
-	"releaseDate": "2017-10-19",
+	"website": "https://github.com/anaggh/core",
+	"version": "2.0.1",
+	"releaseDate": "2017-10-24",
 	"license": "MIT",
 	"compatible": "2.0,2.0.1",
 	"notes": "Minimal theme - Consisting of only the bare necessities."
