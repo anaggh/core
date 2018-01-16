@@ -1,12 +1,11 @@
 /* Reset */
-body{
-	margin: 0;
-	padding: 0;
-	border: 0;
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 /* Dead Simple Grid (c) 2015 Vladimir Agafonkin */
-
 .row .row { margin:  0 -1.5em; }
 .col      { padding: 0  1.5em; }
 
@@ -24,112 +23,108 @@ body{
 
 /* Important Responsiveness */
 .container {
-	max-width: 90em;
-	margin:0 auto;
+    max-width: 90em;
+    margin:0 auto;
 }
 
 /* You only need width to set up columns; all columns are 100%-width by default, so we start
 from a one-column mobile layout and gradually improve it according to available screen space */
 
 @media only screen and (min-width: 34em) {
-	.feature, .info { width: 50%; }
+    .feature, .info { width: 50%; }
 }
 
 @media only screen and (min-width: 54em) {
-	.content { width: 70.83%; }
-	.sidebar { width: 29.17%; }
-	.info    { width: 100%;   }
+    .content { width: 70.83%; }
+    .sidebar { width: 29.17%; }
+    .info    { width: 100%;   }
 }
 
 @media only screen and (min-width: 76em) {
-	.content { width: 70.83%; } /* 8.5/12 */
-	.sidebar { width: 29.17%; } /* 3.5/12 */
-	.info    { width: 50%;	}
+    .content { width: 70.83%; } /* 8.5/12 */
+    .sidebar { width: 29.17%; } /* 3.5/12 */
+    .info    { width: 50%;  }
 }
 
 /* Custom Styles */
-
-body, input{
-	font-family: "Lucida Console", Monaco, "Courier New", Courier, monospace, sans-serif;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 0.98em;
+body, input {
+    font-family: "Lucida Console", Monaco, "Courier New", Courier, monospace, sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.98em;
 }
 
-p, ul{
-	line-height:1.5;
+p, ul {
+    line-height:1.5;
 }
 
 /* Fix Image Overflowing if size is too big */
-img{
-	max-width: 100%;
+img {
+    max-width: 100%;
 }
 
 /* Links */
-a{
-	text-decoration:none;
-	color:#198cff;
+a {
+    text-decoration:none;
+    color:#198cff;
 }
 
-a:hover{
-	color: #000;
+a:hover {
+    color: #000;
 }
 
 /* Header */
-
-.nav{
-	font-size: 2em;
-	text-align:center;
-	background: #F5F5F5;
-	padding: 9px 0;
+.nav {
+    font-size: 2em;
+    text-align:center;
+    background: #F5F5F5;
+    padding: 9px 0;
 }
 
-.slogan{
-	font-size:medium;
+.slogan {
+    font-size:medium;
 }
 
 /* Footer */
-.footer{
-	text-align:center;
-	background-color: #F5F5F5;
-	font-size: 13px;
-	padding: 8px 0;
+.footer {
+    text-align:center;
+    background-color: #F5F5F5;
+    font-size: 13px;
+    padding: 8px 0;
 }
 
 /* hr style after each post */
-hr.end-post-hr{
-	border: 0;
-	height: 1px;
-	background: #333;
-	background-image: linear-gradient(to right, #ccc, #333, #ccc);
+hr.end-post-hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 /* Syntax Highlighting */
-code, pre{
-	font-family: Terminal, monospace;
-	background-color:rgb(240, 240, 240);
-	overflow-x: auto;
+code, pre {
+    font-family: Terminal, monospace;
+    background-color:rgb(240, 240, 240);
+    overflow-x: auto;
 }
 
 code {
-	border: 0;
-	margin: 0;
-	color: #333;
+    border: 0;
+    margin: 0;
+    color: #333;
 }
 
 pre code {
-	font-weight: normal !important;
-	overflow-x: auto;
+    font-weight: normal !important;
+    overflow-x: auto;
 }
 
 /* Meta information - home.php */
-
-.timestamp, .meta{
-	font-size:small;
-	padding-bottom: 8px;
+.timestamp, .meta {
+    font-size:small;
+    padding-bottom: 8px;
 }
 
 /* Pagination */
-
 .button {
     background-color: #fff;
     border: 2px solid rgba(0, 0, 0, 0.8);
@@ -150,48 +145,47 @@ pre code {
 }
 
 .pagination {
-	list-style-type:none;
-	padding:20px 0;
-	margin: 0;
-	text-align:center;
+    list-style-type:none;
+    padding:20px 0;
+    margin: 0;
+    text-align:center;
 }
 
-.pagination li{
-	display:inline-block;
+.pagination li {
+    display:inline-block;
 }
 
-.previous, .next{
-	text-transform:uppercase;
+.previous, .next {
+    text-transform:uppercase;
 }
 
-/* posts.php page.php */
-
-.tags{
-	font-size: small;
-	font-weight:bold;
-	text-align:center;
-	padding-bottom: 25px;
+/* page.php */
+.tags {
+    font-size: small;
+    font-weight:bold;
+    text-align:center;
+    padding-bottom: 25px;
 }
 
-.tag-list{
-	font-weight: normal;
+.tag-list {
+    font-weight: normal;
 }
 
 /* Blockquotes */
 blockquote {
-	border-left: 4px solid #6a7e95;
-	padding: 5px 5px 5px 20px;
+    border-left: 4px solid #6a7e95;
+    padding: 5px 5px 5px 20px;
 }
 
 /* Tables */
 table {
-	display: table;
-	width: 100%;
-	border-width: 0px;
-	border-collapse: collapse;
-	color: rgba(0, 0, 0, 0.8);
-	margin-top: 0px;
-	margin-bottom: 20px;
+    display: table;
+    width: 100%;
+    border-width: 0px;
+    border-collapse: collapse;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 table thead tr td {
@@ -208,55 +202,54 @@ table tr td {
 }
 
 /* Plugins */
-
-.plugin-tags{
-	font-size: 0.98em; /* Equal to body font-size */
+.plugin-tags {
+    font-size: 0.98em; /* Equal to body font-size */
 }
 
-.plugin-tags li{
-	text-transform: capitalize;
-	list-style-type: none;
+.plugin-tags li {
+    text-transform: capitalize;
+    list-style-type: none;
 }
 
 .plugin > h2 {
-	text-transform: uppercase;
-	font-weight: normal;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 .plugin ul {
-	list-style: none !important;
-	padding: 0 !important;
+    list-style: none !important;
+    padding: 0 !important;
 }
 
 .plugin li {
-	padding: 0 !important;
+    padding: 0 !important;
 }
 
 .plugin-pages ul.children {
-	margin: 0 0 0 10px;
+    margin: 0 0 0 10px;
 }
 
 /* Search Box */
-.form-control{
-	width: 100%;
-	padding: 12px 20px;
-	margin: 15px 0 5px 0;
-	box-sizing: border-box;
-	border: 1px solid rgba(0, 0, 0, 0.5);
-	transition: 0.5s;
-	outline: none;
+.form-control {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0 5px 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    outline: none;
 }
 
 .form-control:focus {
-	border: 1px solid #000;
+    border: 1px solid #000;
 }
 
 /* Cover Images */
-.featured{
-	/* Add custom CSS here if required. */
+.featured {
+    /* Add custom CSS here if required. */
 }
 
 /* Read-more button */
-.read-more{
-	text-transform:uppercase;
+.read-more {
+    text-transform:uppercase;
 }

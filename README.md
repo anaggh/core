@@ -1,12 +1,12 @@
 ### Bludit Theme: Core
 
-#### Note: If you are using Bludit v1, use the v1 branch instead.
+#### Note: If you are using Bludit v1.x, use the v1 branch instead.
 
 #### Features:
 
 * Lightweight
 * Uses default system fonts.
-* Optional: Automatic Code Syntax Highlighting - highlight.js - https://highlightjs.org/
+* Optional: Automatic Code Syntax Highlighting - highlight.js - https://highlightjs.org/ `Uncomment it in head.php if needed`
 
 #### Additional Notes:
 
