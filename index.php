@@ -5,16 +5,21 @@
 <?php include_once(THEME_DIR_PHP.'head.php') ?>
 </head>
 <body>
-
+<?php Theme::plugins('siteBodyBegin') ?>
 <header class="nav">
     <span>
-        <a href="<?php echo $Site->url() ?>" title="company-title"><?php echo $Site->title() ?></a>
+        <a href="<?php echo $Site->url() ?>" title="company-title" class='large-text'><?php echo $Site->title() ?></a>
         <span class="slogan"><?php echo $Site->slogan() ?></span>
     </span>
+    <!-- Search -->
+    <form role="search" action="<?php echo $Site->url() . 'search.php';?>" target="_blank">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+    </form>
 </header>
 
 <main>
 <div class="container">
+
     <div class="row">
         <div class="col content">
             <?php
@@ -28,16 +33,8 @@
 
         <!-- Sidebar -->
         <div class="col sidebar">
-
-        <!-- Search -->
-        <form role="search" action="<?php echo $Site->url() . 'search.php';?>" target="_blank">
-        <div class="form-group">
-            <input type="text" name="q" class="form-control" placeholder="Search...">
-        </div>
-        </form>
-
-        <!-- Load sidebar -->
-        <?php Theme::plugins('siteSidebar') ?>
+            <!-- Load sidebar -->
+            <?php Theme::plugins('siteSidebar') ?>
         </div>
     </div>
 </div>

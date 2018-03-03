@@ -1,11 +1,11 @@
 <?php
-Theme::charset('utf-8');
-Theme::viewport('width=device-width, initial-scale=1');
+echo Theme::charset('utf-8');
+echo Theme::viewport('width=device-width, initial-scale=1');
 
-Theme::title();
-Theme::description();
+echo Theme::headTitle();
+echo Theme::headDescription();
 
-Theme::favicon('favicon.png');
+echo Theme::favicon('img/favicon.png');
 ?>
 
 <link rel="stylesheet" href="<?php echo HTML_PATH_THEME ?>assets/css/style.css">
@@ -19,8 +19,6 @@ Theme::favicon('favicon.png');
 <meta name="referrer" content="no-referrer" />
 
 <?php
-
 // Load plugins, hook: Site head
 Theme::plugins('siteHead');
-
 ?>

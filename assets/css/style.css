@@ -74,10 +74,13 @@ a:hover {
 
 /* Header */
 .nav {
-    font-size: 2em;
     text-align:center;
     background: #F5F5F5;
-    padding: 9px 0;
+    padding: 8px 0;
+}
+
+.large-text {
+    font-size: 1.9em;
 }
 
 .slogan {
@@ -231,17 +234,17 @@ table tr td {
 
 /* Search Box */
 .form-control {
-    width: 100%;
-    padding: 12px 20px;
+    width: 75%;
+    padding: 8px 10px;
     margin: 15px 0 5px 0;
     box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: 0.5s;
     outline: none;
 }
 
 .form-control:focus {
-    border: 1px solid #000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 /* Cover Images */
