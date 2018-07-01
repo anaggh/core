@@ -12,7 +12,7 @@
         <span class="slogan"><?php echo $Site->slogan() ?></span>
     </span>
     <!-- Search -->
-    <form role="search" action="<?php echo $Site->url() . 'search.php';?>" target="_blank">
+    <form role="search" action="<?php echo $Site->url() . (substr($Site->url(), -1) == '/' ? '' : '/') . 'search.php';?>" target="_blank">
         <input type="text" name="q" class="form-control" placeholder="Search...">
     </form>
 </header>
