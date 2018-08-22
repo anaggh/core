@@ -8,11 +8,11 @@
 <?php Theme::plugins('siteBodyBegin') ?>
 <header class="nav">
     <span>
-        <a href="<?php echo $Site->url() ?>" title="company-title" class='large-text'><?php echo $Site->title() ?></a>
-        <span class="slogan"><?php echo $Site->slogan() ?></span>
+        <a href="<?php echo $site->url() ?>" title="company-title" class='large-text'><?php echo $site->title() ?></a>
+        <span class="slogan"><?php echo $site->slogan() ?></span>
     </span>
     <!-- Search -->
-    <form role="search" action="<?php echo $Site->url() . (substr($Site->url(), -1) == '/' ? '' : '/') . 'search.php';?>" target="_blank">
+    <form role="search" action="<?php echo $site->url() . (substr($site->url(), -1) == '/' ? '' : '/') . 'search.php';?>" target="_blank">
         <input type="text" name="q" class="form-control" placeholder="Search...">
     </form>
 </header>
@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col content">
             <?php
-            if ($Url->whereAmI()=='page') {
+            if ($WHERE_AM_I =='page') {
                 include(THEME_DIR_PHP.'page.php');
             } else {
                 include(THEME_DIR_PHP.'home.php');

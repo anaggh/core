@@ -1,8 +1,6 @@
 ### Bludit Theme: Core
 
-#### Note: If you are using Bludit v1.x, use the v1 branch instead.
-
-Test
+#### Note: If you are using Bludit v1.x / v2.x, use the other branches instead.
 
 #### Features:
 
@@ -19,7 +17,7 @@ Test
 <!-- Custom Google Search -->
 <form role="search" action="https://encrypted.google.com/search" target="_blank">
 <div class="form-group">
-  <input type="hidden" name="as_sitesearch" value="<?php echo preg_replace('/(?:https?:\/\/)?(?:www\.)?(.*)\/?$/i', '$1', $Site->url()); /* http://stackoverflow.com/questions/6738752/regex-for-dropping-http-and-www-from-urls */?>">
+  <input type="hidden" name="as_sitesearch" value="<?php echo preg_replace('/(?:https?:\/\/)?(?:www\.)?(.*)\/?$/i', '$1', $site->url()); /* http://stackoverflow.com/questions/6738752/regex-for-dropping-http-and-www-from-urls */?>">
   <input type="hidden" name="as_qdr" value="all">
   <input type="text" name="as_q" class="form-control" placeholder="Search...">
 </div>

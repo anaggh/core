@@ -1,22 +1,22 @@
 <div class="footer">
-    <?php echo $Site->footer() ?>
+    <?php echo $site->footer() ?>
 
     <!-- Social Media Links, Sitemap and RSS -->
     <?php
-    if ($Site->twitter()) {
-        echo '<a href="'.$Site->twitter().'" title="twitter-url"><span> Twitter</span></a> |';
+    if ($site->twitter()) {
+        echo '<a href="'.$site->twitter().'" title="twitter-url"><span> Twitter</span></a> |';
     }
 
-    if ($Site->facebook()) {
-        echo '<a href="'.$Site->facebook().'" title="facebook-url"><span> Facebook</span></a> |';
+    if ($site->facebook()) {
+        echo '<a href="'.$site->facebook().'" title="facebook-url"><span> Facebook</span></a> |';
     }
 
-    if ($Site->instagram()) {
-        echo '<a href="'.$Site->instagram().'" title="instagram-url"><span> Instagram</span></a> |';
+    if ($site->instagram()) {
+        echo '<a href="'.$site->instagram().'" title="instagram-url"><span> Instagram</span></a> |';
     }
 
-    if ($Site->github()) {
-        echo '<a href="'.$Site->github().'" title="github-url"><span> Github</span></a> |';
+    if ($site->github()) {
+        echo '<a href="'.$site->github().'" title="github-url"><span> Github</span></a> |';
     }
 
     if ($plugins['all']['pluginRSS']->installed()) {
