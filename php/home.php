@@ -8,7 +8,7 @@
     <!-- Header -->
     <header>
         <div class="title">
-            <h1><a href="<?php echo $page->permalink() ?>"><?php echo $page->title() ?></a></h1>
+            <h2><a href="<?php echo $page->permalink() ?>"><?php echo $page->title() ?></a></h2>
             <p><?php echo $page->description() ?></p>
         </div>
         <div class="meta">
@@ -25,7 +25,8 @@
             }
             ?>
 
-            <span class="timestamp">Posted <time class="published" datetime="2016-12-01"><?php echo $page->date() ?></time> by <?php echo $author ?></span>
+            
+            <span class="timestamp">Posted <time class="published" datetime="<?php echo $Page->dateModified(); ?>"><?php echo $page->date() ?></time> by <?php echo $author ?></span>
         </div>
     </header>
 
