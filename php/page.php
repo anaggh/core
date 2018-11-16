@@ -6,7 +6,7 @@
     <!-- Page's header -->
     <header>
         <div class="title">
-            <h2><a href="<?php echo $page->permalink() ?>"><?php echo $page->title() ?></a></h2>
+            <h2><a href="<?= $page->permalink() ?>"><?= $page->title() ?></a></h2>
         </div>
         <div class="meta">
             <?php
@@ -20,10 +20,13 @@
             if (Text::isNotEmpty($User->firstName()) || Text::isNotEmpty($User->lastName())) {
                 $author = $User->firstName().' '.$User->lastName();
             }
+
+            $timestamp = empty($page->dateModified()) ? $page->date() : Date::format($page->dateModified(), DB_DATE_FORMAT, $site->dateFormat());
+            $zuluTime = gmdate("Y-m-d\TH:i:s\Z", strtotime($page->dateRaw()));
             ?>
 
-            <span class="timestamp">Posted <time class="published" datetime="<?php echo $Page->dateModified(); ?>">
-                <?php echo $Page->date() ?></time> by <?php echo $author ?>
+            <span class="timestamp">Posted <time class="published" datetime="<?= $zuluTime ?>">
+                <?= $timestamp ?></time> by <?= $author ?>
             </span>
         </div>
     </header>
@@ -33,10 +36,10 @@
     if ($page->coverImage()) {
         echo '<a href="'.$page->permalink().'" class="image featured"><img src="'.$page->coverImage().'" alt="Cover Image"></a>';
     }
-    ?>
 
-    <!-- Page's content, the first part if has pagebrake -->
-    <?php echo $page->content() ?>
+    // Content
+    echo $page->content();
+    ?>
 
     <!-- Page's footer -->
     <footer>
@@ -44,15 +47,16 @@
         <div class="tags">TAGS:
             <span class="tag-list">
                 <?php
-                $page_tags = $page->tags(true);
-                if (count($page_tags) == 0) {
-                    echo "No tags found.";
+                $pageTags = $page->tags(true);
+                if (empty($pageTags)) {
+                    echo 'No tags found.';
                 } else {
                     $listOfTags = '';
-                    foreach ($page_tags as $tagKey => $tagName) {
+                    foreach ($pageTags as $tagKey => $tagName) {
                         $listOfTags .= '<a href="'.HTML_PATH_ROOT.$url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a>, ';
                     }
-                    echo substr($listOfTags, 0, -2) . '.'; // Remove final ", '" and add "." after the last tag.
+                    // Remove final ", '" and add "." after the last tag.
+                    echo substr($listOfTags, 0, -2) . '.';
                 }
                 ?>
             </span>

@@ -8,11 +8,11 @@
 <?php Theme::plugins('siteBodyBegin') ?>
 <header class="nav">
     <span>
-        <a href="<?php echo $site->url() ?>" title="company-title" class='large-text'><?php echo $site->title() ?></a>
-        <span class="slogan"><?php echo $site->slogan() ?></span>
+        <a href="<?= $site->url() ?>" title="company-title" class='large-text'><?= $site->title() ?></a>
+        <span class="slogan"><?= $site->slogan() ?></span>
     </span>
     <!-- Search -->
-    <form role="search" action="<?php echo $site->url() . (substr($site->url(), -1) == '/' ? '' : '/') . 'search.php';?>" target="_blank">
+    <form role="search" action="<?= $site->url() . (substr($site->url(), -1) == '/' ? '' : '/') . 'search.php';?>" target="_blank">
         <input type="text" name="q" class="form-control" placeholder="Search...">
     </form>
 </header>

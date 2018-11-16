@@ -1,5 +1,5 @@
 <div class="footer">
-    <?php echo $site->footer() ?>
+    <?= $site->footer() ?>
 
     <!-- Social Media Links, Sitemap and RSS -->
     <?php
