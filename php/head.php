@@ -2,8 +2,8 @@
 echo Theme::charset('utf-8');
 echo Theme::viewport('width=device-width, initial-scale=1');
 
-echo Theme::headTitle();
-echo Theme::headDescription();
+echo Theme::metaTagTitle();
+echo Theme::metaTagDescription();
 
 echo Theme::favicon('img/favicon.png');
 ?>

@@ -1,3 +1,7 @@
+<?php
+// Common Theme functions
+include(THEME_DIR_PHP.'functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +12,11 @@
 <?php Theme::plugins('siteBodyBegin') ?>
 <header class="nav">
     <span>
-        <a href="<?= $site->url() ?>" title="company-title" class='large-text'><?= $site->title() ?></a>
+        <a href="<?= $site->url() ?>" title="site-title" class='large-text'><?= $site->title() ?></a>
         <span class="slogan"><?= $site->slogan() ?></span>
     </span>
     <!-- Search -->
-    <form role="search" action="<?= $site->url() . (substr($site->url(), -1) == '/' ? '' : '/') . 'search.php';?>" target="_blank">
+    <form role="search" action="<?= DOMAIN_BASE.'search.php' ?>" target="_blank">
         <input type="text" name="q" class="form-control" placeholder="Search...">
     </form>
 </header>
